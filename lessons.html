@@ -1,0 +1,66 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles3.css" />
+<body class="lessons-page">
+	<header id="header">
+	  <div class="header-content">
+		<h1 class="page-title">Уроки и игры</h1>
+		<nav>
+			<ul>
+			  <li><a href="./index.html">Главная</a></li>
+			  <li><a href="./info/blocks.html">Справочник</a></li>
+			  <li><a href="./wedo.html">О WeDo 2.0</a></li>
+			  <li><a href="./lessons.html">Уроки и игры</a></li>
+			</ul>
+		</nav>
+	  </div>
+	</header>
+
+  <main class="lesson-container">
+    <!-- Сообщение для младших -->
+    <div id="age-warning" class="age-warning" style="display: none;">
+      👨‍👩‍👦 Для детей младше 11 лет рекомендуется выполнять задания вместе с родителем или учителем.
+    </div>
+
+    <!-- Вводим ссылку на Scratch -->
+    <section class="lesson-block">
+      <h2>🔗 Работаем в Scratch</h2>
+      <p>Перейдите на официальный сайт Scratch, чтобы начать создавать проекты:</p>
+      <a href="https://scratch.mit.edu" target="_blank" class="lesson-link">Перейти на сайт Scratch</a>
+    </section>
+
+    <!-- Пример задания -->
+	<section class="lesson-block">
+		<a href="lesson1.html" class="lesson-link-wrapper">
+		  <h2 class="clickable-title">🎮 Урок 1: Простая анимация</h2>
+		  <img src="./les/les1/l1.gif" alt="Пример анимации" class="lesson-img" />
+		</a>
+		<p>Создайте спрайта, который будет говорить и двигаться. Используйте блоки из разделов «Движение» и «Внешний вид».</p>
+		<p><strong>Совет:</strong> Можно добавить звук и переключать костюмы.</p>
+		<p>📁 <a href="https://drive.google.com/your-folder-link" target="_blank" class="lesson-link">Скачать спрайты и фоны</a></p>
+	</section>
+	
+	<section class="lesson-block">
+		<a href="lesson2.html" class="lesson-link-wrapper">
+		  <h2 class="clickable-title">🎮 Урок 2: Кот Scratch</h2>
+		  <img src="./sborki/1cat/59.jpg" alt="Пример анимации" class="lesson-img" />
+		</a>
+		<p>Оживим робота при помощи Scratch и изучим новые блоки</p>
+		<p><strong>Совет:</strong> Для этого урока обязателен конструктор</p>
+		<p>📁 <a href="https://drive.google.com/your-folder-link" target="_blank" class="lesson-link">Скачать спрайты и фоны</a></p>
+	</section>
+
+    <!-- Добавляй ещё задания по шаблону -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Справочник по Scratch 3 и WeDo 2.0</p>
+  </footer>
+
+  <script>
+    // Проверка возраста для рекомендаций
+    const age = parseInt(localStorage.getItem('userAge'));
+    if (age && age < 11) {
+      document.getElementById('age-warning').style.display = 'block';
+    }
+  </script>
+</body>

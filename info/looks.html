@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<style>
+	body.looks-page #header {
+    background-color: #9966FF !important;
+}
+	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник по блокам Scratch 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles2.css">
+</head>
+
+<body class="looks-page">
+    <header id="header">
+        <div class="header-content">
+            <h1>Справочник по блокам Scratch 3</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="./blocks.html">Справочник</a></li>
+                    <li><a href="../wedo.html">О WeDo 2.0</a></li>
+                    <li><a href="../lessons.html">Уроки и Игры</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Навигационные шарики слева -->
+    <div class="nav-circles">
+        <div class="circle-container">
+            <!-- Ссылка на саму страницу "ВнешнийВид" -->
+            <a href="./blocks.html" class="circle">
+                <img src="../img/siniy1.png" alt="Движение">
+            </a>
+            <p class="circle-title">Движение</p>
+        </div>
+        <div class="circle-container">
+            <a href="./looks.html" class="circle">
+                <img src="../img/fiol1.png" alt="Внешний вид">
+            </a>
+            <p class="circle-title">Внешний вид</p>
+        </div>
+        <div class="circle-container">
+            <a href="./sound.html" class="circle">
+                <img src="../img/pink1.png" alt="Звук">
+            </a>
+            <p class="circle-title">Звук</p>
+        </div>
+        <div class="circle-container">
+            <a href="./events.html" class="circle">
+                <img src="../img/yellow1.png" alt="События">
+            </a>
+            <p class="circle-title">События</p>
+        </div>
+        <div class="circle-container">
+            <a href="./control.html" class="circle">
+                <img src="../img/orange.png" alt="Управление">
+            </a>
+            <p class="circle-title">Управление</p>
+        </div>
+        <div class="circle-container">
+            <a href="./sensing.html" class="circle">
+                <img src="../img/blue.png" alt="Сенсоры">
+            </a>
+            <p class="circle-title">Сенсоры</p>
+        </div>
+        <div class="circle-container">
+            <a href="./operators.html" class="circle">
+                <img src="../img/green.png" alt="Операторы">
+            </a>
+            <p class="circle-title">Операторы</p>
+        </div>
+        <div class="circle-container">
+            <a href="./variables.html" class="circle">
+                <img src="../img/red.png" alt="Переменные">
+            </a>
+            <p class="circle-title">Переменные</p>
+        </div>
+        <div class="circle-container">
+            <a href="./otherblocks.html" class="circle">
+                <img src="../img/roze.png" alt="Другие блоки">
+            </a>
+            <p class="circle-title">Другие блоки</p>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main>
+        <section id="looks" class="section">
+            <h2 class="section-title looks-title">Внешний вид</h2>
+			<p class="looks-description">Блоки из категории «Внешний вид» помогают менять, как спрайт или сцена выглядят.
+			С их помощью можно изменить цвет, размер, костюм спрайта, сделать его невидимым или показать снова, а также поменять фон. Эти блоки часто используют для анимации, диалогов и оформления сцены.</p>
+            <!-- Первый блок -->
+			<div class="block-item">
+                <img src="../img/looks/f1.png" alt="ВнешнийВид" class="block-img">
+                <div class="block-description">
+                    <h3>Сказать [привет!] в течение [2] секунд</h3>
+                    <p>👉 Показывает облачко с текстом (как комикс), в котором спрайт что-то говорит. Через указанное время облачко исчезает.</p>
+                </div>
+            </div>
+
+            <!-- Дополнительные блоки (19 штук) -->
+            <div class="block-item">
+                <img src="../img/looks/f2.png" alt="Сказать" class="block-img">
+                <div class="block-description">
+                    <h3>Сказать [привет!]</h3>
+                    <p>👉 Спрайт начинает говорить и облачко остаётся, пока ты не скажешь ему остановиться.</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/looks/f3.png" alt="Думать в течение" class="block-img">
+                <div class="block-description">
+                    <h3>Думать [интересно...] в течение [2] секунд</h3>
+                    <p>💭 Спрайт показывает "мысль" (облачко с пузырьками), которая исчезает через несколько секунд.</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/looks/f4.png" alt="Думать" class="block-img">
+                <div class="block-description">
+                    <h3>Думать [хм...]</h3>
+                    <p>💭 Спрайт думает, и мысль остаётся, пока ты не скажешь ему подумать что-то другое или убрать мысль.</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/looks/f5.png" alt="Изменить костюм" class="block-img">
+                <div class="block-description">
+                    <h3>Изменить костюм на [костюм2]</h3>
+                    <p>👗 Спрайт переодевается в другой костюм. Это как смена одежды!</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/looks/f6.png" alt="Следующий костюм" class="block-img">
+                <div class="block-description">
+                    <h3>Следующий костюм</h3>
+                    <p>🔄 Спрайт надевает следующий костюм из списка. Очень удобно для создания анимации (например, шагает или машет рукой).</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/looks/f7.png" alt="Переключить фон" class="block-img">
+                <div class="block-description">
+                    <h3>Переключить фон на [лес]</h3>
+                    <p>🌳 Меняет картинку заднего плана сцены. Например, из класса переместиться в лес.</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/looks/f8.png" alt="Следующий фон" class="block-img">
+                <div class="block-description">
+                    <h3>Следующий фон</h3>
+                    <p>🔄 Переключает сцену на следующий фон в списке. Полезно для создания слайд-шоу или истории.</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/looks/f9.png" alt="Изменить размер" class="block-img">
+                <div class="block-description">
+                    <h3>Изменить размер на [10]%</h3>
+                    <p>🔍 Делает спрайт больше или меньше на указанное число процентов.</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/looks/f10.png" alt="Установить размер" class="block-img">
+                <div class="block-description">
+                    <h3>Установить размер в [100]%</h3>
+                    <p>📏 Устанавливает точный размер. Например, 50% — половина размера, 200% — в два раза больше.</p>
+                </div>
+            </div>
+			<div class="block-item">
+                <img src="../img/looks/f11.png" alt="Изменить эффект" class="block-img">
+                <div class="block-description">
+                    <h3>Изменить эффект [цвет] на [25]</h3>
+                    <p>🌈 Меняет внешний вид спрайта. Например, делает его цветным, прозрачным или искажённым.</p>
+                </div>
+            </div>
+			<div class="block-item">
+                <img src="../img/looks/f12.png" alt="Установить эффект" class="block-img">
+                <div class="block-description">
+                    <h3>Установить эффект [цвет] в [50]</h3>
+                    <p>🎨 Устанавливает эффект на определённое значение. Например, спрайт может стать синего цвета.</p>
+                </div>
+            </div>
+			<div class="block-item">
+                <img src="../img/looks/f13.png" alt="Очистить эффекты" class="block-img">
+                <div class="block-description">
+                    <h3>Очистить графические эффекты</h3>
+                    <p>🧼 Убирает все эффекты. Спрайт возвращается к обычному виду.</p>
+                </div>
+            </div>
+			<div class="block-item">
+                <img src="../img/looks/f14.png" alt="Показаться" class="block-img">
+                <div class="block-description">
+                    <h3>Показаться</h3>
+                    <p>👀 Делает спрайт видимым на экране.</p>
+                </div>
+            </div>
+			<div class="block-item">
+                <img src="../img/looks/f15.png" alt="Спрятаться" class="block-img">
+                <div class="block-description">
+                    <h3>Спрятаться</h3>
+                    <p>🙈 Прячет спрайт. Он остаётся в проекте, но его не видно.</p>
+                </div>
+            </div>
+			<div class="block-item">
+                <img src="../img/looks/f16.png" alt="Переместить на передний" class="block-img">
+                <div class="block-description">
+                    <h3>Переместить на передний слой</h3>
+                    <p>🥇 Спрайт становится поверх всех других спрайтов — видно лучше всех.</p>
+                </div>
+            </div>
+			<div class="block-item">
+                <img src="../img/looks/f17.png" alt="Перейти вперёд" class="block-img">
+                <div class="block-description">
+                    <h3>Перейти вперёд на [1] слоя</h3>
+                    <p>📚 Перемещает спрайт чуть выше других, чтобы он не прятался за ними.</p>
+                </div>
+            </div>
+			<div class="block-item">
+                <img src="../img/looks/f18.png" alt="костюм" class="block-img">
+                <div class="block-description">
+                    <h3>[костюм]</h3>
+                    <p>🔢 Показывает номер или имя костюма, который сейчас на спрайте.</p>
+                </div>
+            </div>
+			<div class="block-item">
+                <img src="../img/looks/f19.png" alt="фон" class="block-img">
+                <div class="block-description">
+                    <h3>[фон]</h3>
+                    <p>🌄 Показывает номер или имя текущего фона на сцене.</p>
+                </div>
+            </div>
+			<div class="block-item">
+                <img src="../img/looks/f20.png" alt="Размер" class="block-img">
+                <div class="block-description">
+                    <h3>Размер</h3>
+                    <p>📐 Показывает, насколько большой сейчас спрайт.</p>
+                </div>
+            </div>
+			
+            <!-- Повторили 20 раз -->
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Справочник по Scratch 3 и WeDo 2.0</p>
+    </footer>
+	<script src="../timer.js"></script>
+</body>
+</html>

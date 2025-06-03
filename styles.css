@@ -1,0 +1,184 @@
+/* --- Общие стили --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap'); /* Подключение шрифта Montserrat */
+
+/* Базовые стили для всего документа */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Основной шрифт */
+    font-size: 16px; /* Базовый размер текста */
+    line-height: 1.6; /* Удобочитаемый интервал */
+    color: #333; /* Тёмный текст для читаемости */
+    background-color: #f9f9f9; /* Светлый фон */
+}
+
+/* Сброс стандартных отступов у заголовков и параграфов */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+/* --- Стили для шапки --- */
+header {
+    background: #4CAF50; /* Зелёный фон */
+    color: #fff; /* Белый текст */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Размер заголовка */
+    font-weight: 700; /* Жирный текст */
+}
+
+/* --- Навигация --- */
+nav ul {
+    display: flex; /* Flexbox для горизонтального выравнивания */
+    justify-content: center;
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 1rem 0 0;
+    gap: 1rem; /* Промежутки между элементами */
+}
+
+nav ul li a {
+    color: #fff; /* Белый текст */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Отступы внутри кнопки */
+    border: 3px solid #fff; /* Рамка */
+    border-radius: 50px; /* Скругление углов */
+    transition: background 0.3s, color 0.3s; /* Плавные эффекты при наведении */
+	font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    background: #fff;
+    color: #4CAF50;
+}
+
+/* --- Основной контент --- */
+main {
+    max-width: 1200px; /* Ограничиваем ширину */
+    margin: 2rem auto; /* Центрируем контент */
+    padding: 1rem; /* Внутренние отступы */
+    background: #fff; /* Белый фон */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+/* --- Блок приветствия --- */
+.welcome-container {
+    text-align: center; /* Центрируем текст */
+    margin-bottom: 2rem; /* Отступ снизу */
+}
+
+.welcome-container h2 {
+    font-size: 2rem; /* Размер заголовка */
+    color: #4CAF50;
+}
+
+.welcome-container p {
+    font-size: 1.2rem; /* Размер текста */
+    margin: 1rem 0; /* Отступы сверху и снизу */
+}
+
+/* --- Изображения --- */
+.image-container,
+.welcome-image {
+    text-align: center; /* Центрируем изображения */
+}
+
+.main-image,
+.welcome-image img {
+    max-width: 100%; /* Адаптивное изображение */
+    height: auto; /* Сохранение пропорций */
+    border-radius: 10px; /* Скруглённые углы */
+}
+
+/* --- Мини-иконки --- */
+.mini-icon {
+    width: 30px; /* Уменьшаем размер мини-иконок */
+    height: auto; /* Сохраняем пропорции */
+    margin-left: 0.5rem; /* Отступ слева от текста */
+    vertical-align: middle; /* Выравниваем с текстом */
+}
+
+/* --- Параллаксный заголовок --- */
+.parallax-header {
+    background-image: url('./img/fon5.png'); /* Фоновое изображение */
+    background-attachment: fixed; /* Параллакс эффект */
+    background-position: center;
+    background-size: cover;
+    height: 50vh; /* Высота блока */
+    display: flex; /* Центрируем текст */
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Белый текст */
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.parallax-header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для контраста */
+}
+
+.parallax-header p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+	    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для контраста */
+}
+
+
+/* --- Блок с текстом и изображением --- */
+.welcome-block, .blocks-block {
+    display: flex; /* Горизонтальное расположение */
+    align-items: center; /* Вертикальное выравнивание */
+    gap: 2rem; /* Отступ между элементами */
+    margin: 2rem 0;
+}
+
+.welcome-block img, .blocks-block img {
+    flex: 0 0 40%; /* Изображение занимает 40% ширины */
+    max-width: 400px; /* Ограничиваем максимальный размер */
+    height: auto;
+}
+
+.welcome-text, .blocks-text {
+    flex: 1; /* Текст занимает оставшуюся ширину */
+    font-size: 1.2rem;
+    line-height: 1.6;
+	
+}
+
+/* --- Подвал --- */
+footer {
+    background: #333; /* Темный фон */
+    color: #fff; /* Белый текст */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    font-size: 1rem; /* Размер текста */
+    margin: 0;
+}
+
+/* --- Адаптивный дизайн --- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Вертикальное меню */
+    }
+
+    nav ul li a {
+        margin: 0.5rem 0; /* Отступы между пунктами */
+    }
+
+    .welcome-block, .blocks-block {
+        flex-direction: column; /* Столбец вместо строки */
+    }
+
+    .welcome-block img, .blocks-block img {
+        max-width: 100%; /* Изображение на всю ширину */
+    }
+}

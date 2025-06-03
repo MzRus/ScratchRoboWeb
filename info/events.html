@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<style>
+	body.events-page #header {
+    background-color: #FFD500 !important;
+}
+	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник по блокам Scratch 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles2.css">
+</head>
+
+<body class="events-page">
+    <header id="header">
+        <div class="header-content">
+            <h1>Справочник по блокам Scratch 3</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="./blocks.html">Справочник</a></li>
+                    <li><a href="../wedo.html">О WeDo 2.0</a></li>
+                    <li><a href="../lessons.html">Уроки и Игры</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Навигационные шарики слева -->
+    <div class="nav-circles">
+        <div class="circle-container">
+            <!-- Ссылка на саму страницу "ВнешнийВид" -->
+            <a href="./blocks.html" class="circle">
+                <img src="../img/siniy1.png" alt="Движение">
+            </a>
+            <p class="circle-title">Движение</p>
+        </div>
+        <div class="circle-container">
+            <a href="./looks.html" class="circle">
+                <img src="../img/fiol1.png" alt="Внешний вид">
+            </a>
+            <p class="circle-title">Внешний вид</p>
+        </div>
+        <div class="circle-container">
+            <a href="./sound.html" class="circle">
+                <img src="../img/pink1.png" alt="Звук">
+            </a>
+            <p class="circle-title">Звук</p>
+        </div>
+        <div class="circle-container">
+            <a href="./events.html" class="circle">
+                <img src="../img/yellow1.png" alt="События">
+            </a>
+            <p class="circle-title">События</p>
+        </div>
+        <div class="circle-container">
+            <a href="./control.html" class="circle">
+                <img src="../img/orange.png" alt="Управление">
+            </a>
+            <p class="circle-title">Управление</p>
+        </div>
+        <div class="circle-container">
+            <a href="./sensing.html" class="circle">
+                <img src="../img/blue.png" alt="Сенсоры">
+            </a>
+            <p class="circle-title">Сенсоры</p>
+        </div>
+        <div class="circle-container">
+            <a href="./operators.html" class="circle">
+                <img src="../img/green.png" alt="Операторы">
+            </a>
+            <p class="circle-title">Операторы</p>
+        </div>
+        <div class="circle-container">
+            <a href="./variables.html" class="circle">
+                <img src="../img/red.png" alt="Переменные">
+            </a>
+            <p class="circle-title">Переменные</p>
+        </div>
+        <div class="circle-container">
+            <a href="./otherblocks.html" class="circle">
+                <img src="../img/roze.png" alt="Другие блоки">
+            </a>
+            <p class="circle-title">Другие блоки</p>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main>
+        <section id="events" class="section">
+            <h2 class="section-title events-title">События</h2>
+			<p class="events-description">Блоки «События» — блоки, с которых обычно начинается программа. Они позволяют запускать скрипты по разным событиям:
+			нажатию зелёного флага, клавиши, клику по спрайту, смене фона, получению сообщения или громкости. С их помощью проекты становятся интерактивными и реагируют на действия пользователя.</p>
+            <!-- Первый блок -->
+			<div class="block-item">
+                <img src="../img/events/j1.png" alt="Флаг" class="block-img">
+                <div class="block-description">
+                    <h3>Когда флаг нажат</h3>
+                    <p>▶️ Этот блок запускает все команды, которые к нему подсоединены, как только ты нажмёшь на зелёный флаг над сценой. Очень полезно, чтобы начать программу с самого начала.</p>
+                </div>
+            </div>
+
+            <!-- Дополнительные блоки (7 штук) -->
+            <div class="block-item">
+                <img src="../img/events/j2.png" alt="Клавиша нажата" class="block-img">
+                <div class="block-description">
+                    <h3>Когда клавиша [пробел] нажата</h3>
+                    <p>⌨️ Запускает скрипт, как только нажимают указанную клавишу (стрелку, пробел и т. д., можно выбрать любую клавишу). Удобно при создании управления в играх.</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/events/j3.png" alt="Спрайт щёлкнут" class="block-img">
+                <div class="block-description">
+                    <h3>Когда спрайт щёлкнут</h3>
+                    <p>👆 Все команды под этим блоком запустятся, если ты кликнешь мышкой прямо по спрайту на сцене.</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/events/j4.png" alt="Фон меняется" class="block-img">
+                <div class="block-description">
+                    <h3>Когда фон меняется на [фон]</h3>
+                    <p>🌄 Блок активируется, когда сцена меняет фон на указанный (например, из «Класс» в «Лес»)</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/events/j5.png" alt="Громкость >" class="block-img">
+                <div class="block-description">
+                    <h3>Когда [громкость] > (10)</h3>
+                    <p>🎤 Срабатывает при достижении громкости микрофона выше заданного порога (например, если ты громко кричишь в микрофон)</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/events/j6.png" alt="Получу сообщение" class="block-img">
+                <div class="block-description">
+                    <h3>Когда я получу [сообщение]</h3>
+                    <p>📨 Ждёт, пока другой скрипт или спрайт не отправит сообщение с этим именем, и затем выполняет команды под блоком</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/events/j7.png" alt="Передать сообщение" class="block-img">
+                <div class="block-description">
+                    <h3>Передать [сообщение]</h3>
+                    <p>📣 Отправляет указанное сообщение всем спрайтам, но скрипт сразу продолжает дальше, не дожидаясь их реакции</p>
+                </div>
+            </div>
+            <div class="block-item">
+                <img src="../img/events/j8.png" alt="Передать сообщение и ждать" class="block-img">
+                <div class="block-description">
+                    <h3>Передать [сообщение] и ждать до конца</h3>
+                    <p>⏳ Отправляет сообщение всем спрайтам и приостанавливает свой скрипт до тех пор, пока все, кто услышал это сообщение, не завершат свои скрипты</p>
+                </div>
+            </div>
+            
+            <!-- Повторили 7 раз -->
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Справочник по Scratch 3 и WeDo 2.0</p>
+    </footer>
+	<script src="../timer.js"></script>
+</body>
+</html>

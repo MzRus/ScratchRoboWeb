@@ -1,0 +1,585 @@
+/* Общие стили */
+body {
+    font-family: 'Open Sans', sans-serif; /* Изменяем шрифт на Open Sans */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+	position: relative; /* Для контроля сдвига заголовка */
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+	margin-top: 30px; /* Добавляем отступ сверху для заголовка */
+	z-index: 10; /* Чтобы заголовок был поверх других элементов */
+	position: relative;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+	flex-wrap: wrap; /* Добавляем перенос строк */
+	margin-top: 50px; /* Увеличиваем отступ между заголовком и ссылками */
+	row-gap: 30px; /* Увеличиваем расстояние между строками */
+}
+
+nav ul li a {
+    color: #fff; /* Белый текст */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Отступы внутри кнопки */
+    border: 2px solid #fff; /* Рамка */
+    border-radius: 5px; /* Скругление углов */
+    transition: background 0.3s, color 0.3s; /* Плавные эффекты при наведении */
+}
+
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+	background: #fff;
+    color: #4CAF50;
+}
+
+
+
+/* Навигационные шарики */
+.nav-circles {
+    position: fixed; /* Панель всегда остаётся на экране */
+    top: 50%; /* Центрируем по вертикали */
+    left: 10px; /* Отступ от левого края */
+    transform: translateY(-50%); /* Выравниваем по центру вертикально */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Расстояние между шариками */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Прозрачный белый фон */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-height: 90vh; /* Ограничиваем максимальную высоту панели */
+    overflow-y: auto; /* Добавляем прокрутку, если элементов слишком много */
+    width: 80px; /* Ширина панели с шариками */
+}
+
+.circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.circle img {
+    max-width: 80%;
+    border-radius: 50%;
+}
+
+.circle-container:hover .circle {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.circle-title {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Основной контент */
+main {
+    margin-left: 100px; /* Увеличиваем отступ для панели навигации */
+    padding: 20px;
+}
+
+/* Заголовок раздела */
+.section-title {
+    text-align: center; /* Центрируем заголовок */
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 30px;
+	color: #4a90e2;
+}
+
+.looks-title {
+	text-align: center; /* Центрируем заголовок */
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 30px;
+	color: #9966FF;
+}
+
+.sound-title {
+	text-align: center; /* Центрируем заголовок */
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 30px;
+	color: #CF63CF;
+}
+
+.events-title {
+	text-align: center; /* Центрируем заголовок */
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 30px;
+	color: #FFD500;
+}
+
+.control-title {
+	text-align: center; /* Центрируем заголовок */
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 30px;
+	color: #FBAA2F;
+}
+
+.sensing-title {
+	text-align: center; /* Центрируем заголовок */
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 30px;
+	color: #4CBFE6;
+}
+
+.operators-title {
+	text-align: center; /* Центрируем заголовок */
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 30px;
+	color: #59C059;
+}
+
+.variables-title {
+	text-align: center; /* Центрируем заголовок */
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 30px;
+	color: #FF8C1A;
+}
+
+.otherblocks-title {
+	text-align: center; /* Центрируем заголовок */
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 30px;
+	color: #FF6680;
+}
+
+/* Настройка описания */
+#motion .motion-description {
+	text-align: center;
+    font-size: 28px; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: #555;
+    overflow-x: auto; /* Позволяет прокручивать текст по горизонтали */
+    white-space: normal;
+    margin: 20px 0; /* Добавляем отступы для визуального комфорта */
+    padding: 0 50px; /* Добавляем отступы по бокам для текста */
+    width: 100%; /* Ширина 100% родительского элемента */
+    box-sizing: border-box; /* Чтобы отступы не выходили за пределы */
+
+}
+
+#looks .looks-description {
+	text-align: center;
+    font-size: 28px; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: #555;
+    overflow-x: auto; /* Позволяет прокручивать текст по горизонтали */
+    white-space: normal;
+    margin: 20px 0; /* Добавляем отступы для визуального комфорта */
+    padding: 0 50px; /* Добавляем отступы по бокам для текста */
+    width: 100%; /* Ширина 100% родительского элемента */
+    box-sizing: border-box; /* Чтобы отступы не выходили за пределы */
+}
+
+#sound .sound-description {
+	text-align: center;
+    font-size: 28px; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: #555;
+    overflow-x: auto; /* Позволяет прокручивать текст по горизонтали */
+    white-space: normal;
+    margin: 20px 0; /* Добавляем отступы для визуального комфорта */
+    padding: 0 50px; /* Добавляем отступы по бокам для текста */
+    width: 100%; /* Ширина 100% родительского элемента */
+    box-sizing: border-box; /* Чтобы отступы не выходили за пределы */
+}
+
+#events .events-description {
+	text-align: center;
+    font-size: 28px; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: #555;
+    overflow-x: auto; /* Позволяет прокручивать текст по горизонтали */
+    white-space: normal;
+    margin: 20px 0; /* Добавляем отступы для визуального комфорта */
+    padding: 0 50px; /* Добавляем отступы по бокам для текста */
+    width: 100%; /* Ширина 100% родительского элемента */
+    box-sizing: border-box; /* Чтобы отступы не выходили за пределы */
+}
+
+#control .control-description {
+	text-align: center;
+    font-size: 28px; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: #555;
+    overflow-x: auto; /* Позволяет прокручивать текст по горизонтали */
+    white-space: normal;
+    margin: 20px 0; /* Добавляем отступы для визуального комфорта */
+    padding: 0 50px; /* Добавляем отступы по бокам для текста */
+    width: 100%; /* Ширина 100% родительского элемента */
+    box-sizing: border-box; /* Чтобы отступы не выходили за пределы */
+}
+
+#sensing .sensing-description {
+	text-align: center;
+    font-size: 28px; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: #555;
+    overflow-x: auto; /* Позволяет прокручивать текст по горизонтали */
+    white-space: normal;
+    margin: 20px 0; /* Добавляем отступы для визуального комфорта */
+    padding: 0 50px; /* Добавляем отступы по бокам для текста */
+    width: 100%; /* Ширина 100% родительского элемента */
+    box-sizing: border-box; /* Чтобы отступы не выходили за пределы */
+}
+
+#operators .operators-description {
+	text-align: center;
+    font-size: 28px; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: #555;
+    overflow-x: auto; /* Позволяет прокручивать текст по горизонтали */
+    white-space: normal;
+    margin: 20px 0; /* Добавляем отступы для визуального комфорта */
+    padding: 0 50px; /* Добавляем отступы по бокам для текста */
+    width: 100%; /* Ширина 100% родительского элемента */
+    box-sizing: border-box; /* Чтобы отступы не выходили за пределы */
+}
+
+#variables .variables-description {
+	text-align: center;
+    font-size: 28px; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: #555;
+    overflow-x: auto; /* Позволяет прокручивать текст по горизонтали */
+    white-space: normal;
+    margin: 20px 0; /* Добавляем отступы для визуального комфорта */
+    padding: 0 50px; /* Добавляем отступы по бокам для текста */
+    width: 100%; /* Ширина 100% родительского элемента */
+    box-sizing: border-box; /* Чтобы отступы не выходили за пределы */
+}
+
+#otherblocks .otherblocks-description {
+	text-align: center;
+    font-size: 28px; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: #555;
+    overflow-x: auto; /* Позволяет прокручивать текст по горизонтали */
+    white-space: normal;
+    margin: 20px 0; /* Добавляем отступы для визуального комфорта */
+    padding: 0 50px; /* Добавляем отступы по бокам для текста */
+    width: 100%; /* Ширина 100% родительского элемента */
+    box-sizing: border-box; /* Чтобы отступы не выходили за пределы */
+}
+
+/* Блоки с картинками и описаниями */
+.block-item {
+    display: flex;
+	flex-direction: row;
+    justify-content: flex-start; /* Сдвигаем элементы вправо */
+    align-items: flex-start;
+	gap: 0px;
+    margin-bottom: 0px;
+    margin-left: 60px; /* Добавляем отступ, чтобы переместить все правее */
+	width: 100%;
+}
+
+.block-description {
+    max-width: 600px;
+	font-size: 16px;          /* Размер шрифта для описания */
+    line-height: 1.6;         /* Межстрочный интервал */
+    color: #555;              /* Цвет текста */
+}
+
+.block-description h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+	word-wrap: break-word;   /* Перенос слов, если они не помещаются */
+    overflow-wrap: break-word; /* Для совместимости */
+    white-space: normal;      /* Разрешаем переносы */
+    font-size: 24px;          /* Размер шрифта для заголовка */
+    margin-bottom: 10px;      /* Немного пространства снизу */
+    line-height: 1.3;         /* Меньше межстрочного интервала */
+}
+
+/* Общие стили для блоков wedo */
+.main-section {
+  display: flex;
+  flex-direction: column;     /* Сначала картинка, потом текст */
+  align-items: center;        /* Центровка по горизонтали */
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.main-img {
+  width: 800px;
+  max-width: 100%;            /* Для адаптивности */
+  height: auto;
+  margin: 0 auto 20px;        /* Центрует картинку дополнительно */
+  display: block;
+}
+
+.main-description {
+  font-size: 2rem; /* Было 1.4rem — увеличим */
+  color: #333;
+  line-height: 1.6;  /* Добавим межстрочный интервал для читаемости */
+  max-width: 1600px;  /* Ограничим ширину, чтобы не расплывался текст */
+  margin: 0 auto;    /* Центрируем текст по ширине */
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Общие стили для блоков */
+.block-item {
+    display: flex; /* Изображение слева, текст справа */
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.block-img {
+    width: 400px; /* Устанавливаем размер картинок */
+    height: auto;
+    margin-right: 20px; /* Отступ между картинкой и описанием */
+}
+
+.block-description {
+    max-width: 1000px; /* Увеличиваем максимальную ширину для текста */
+    font-size: 22px; /* Увеличиваем размер текста для ПК */
+    line-height: 0;
+}
+
+.block-description h3 {
+    font-size: 32px; /* Увеличиваем размер заголовка */
+    font-weight: bold;
+	word-wrap: break-word;  /* Текст будет переноситься на новую строку */
+	overflow-wrap: break-word; /* Для совместимости */
+	white-space: normal;  /* Разрешаем перенос строк */
+	margin-bottom: 10px;      /* Немного пространства снизу */
+	line-height: 1.3;         /* Меньше межстрочного интервала, чтобы текст не налазил */
+}
+
+.block-description p {
+    font-size: 32px; /* Увеличиваем размер текста */
+    line-height: 1.2;
+    color: #333;
+}
+
+
+/* Сборки */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* ===== Стили для страниц со сборками роботов ===== */
+
+body.wedo-page {
+  background-color: #f4f4f9;
+}
+
+.robot-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.robot-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.robot-card:hover {
+  transform: scale(1.03);
+}
+
+.robot-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.robot-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #2b7aa3;
+}
+
+.robot-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Список описания компонентов WeDo */
+.info-list {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #444;
+}
+
+
+/* Медиа-запросы для адаптации под планшеты */
+@media (max-width: 800px) { /* Для планшетов */
+	/* Описание */
+	.section-title {
+        font-size: 40px; /* Уменьшаем размер шрифта заголовка */
+    }
+
+    #motion .motion-description {
+        font-size: 20px; /* Уменьшаем размер текста описания */
+    }
+	
+	/* Шапка */
+	header {
+        padding: 20px 20px 20px 120px; /* Увеличиваем отступ слева, чтобы сдвигать заголовок вправо */
+    }
+
+    header h1 {
+        font-size: 36px; /* Уменьшаем размер шрифта */
+    }
+	
+    header nav ul {
+        padding-left: 30px; /* Сдвигаем навигацию вправо */
+        justify-content: flex-start; /* Начинаем с левого края */
+    }
+
+    header nav ul li {
+        flex: 1 1 100%; /* Каждая ссылка теперь занимает 100% ширины, чтобы перенести их на новую строку */
+        text-align: center;
+    }
+	/* Блоки */
+    .block-img {
+        width: 350px; /* Уменьшаем картинку на планшетах */
+    }
+
+    .block-item {
+        flex-direction: column; /* Изображение и описание теперь вертикально */
+        align-items: center; /* Центрируем элементы */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .block-description p {
+        font-size: 24px; /* Уменьшаем размер текста */
+        margin-top: 6px; /* Отступ сверху для текста */
+		max-width: 100%; /* Обеспечим, чтобы описание не выходило за пределы */
+		box-sizing: border-box; /* Для правильных отступов внутри блока */
+		padding-right: 15px; /* Немного отступа справа, чтобы текст не упирался в края */
+    }
+
+    .block-description h3 {
+        font-size: 28px; /* Уменьшаем размер заголовка */
+		word-wrap: break-word;  /* Текст будет переноситься на новую строку */
+		white-space: normal;  /* Разрешаем перенос строк */
+		overflow-wrap: break-word; /* Для совместимости */
+		margin-bottom: 10px;      /* Немного пространства снизу */
+		line-height: 1.3;         /* Меньше межстрочного интервала, чтобы текст не налазил */
+    }
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 500px) { /* Для мобильных устройств */
+   /* Описание */
+   .section-title {
+        font-size: 30px; /* Уменьшаем размер шрифта заголовка */
+    }
+
+    #motion .motion-description {
+        font-size: 16px; /* Уменьшаем размер текста описания */
+		
+   /* Шапка */
+   header {
+        padding: 20px 20px 20px 110px; /* Увеличиваем отступ слева ещё больше */
+    }
+
+    header h1 {
+        font-size: 28px; /* Уменьшаем размер шрифта еще больше */
+    }
+	
+    header nav ul {
+        padding-left: 0px; /* Сдвигаем навигацию вправо */
+        justify-content: flex-start; /* Начинаем с левого края */
+    }
+
+    header nav ul li {
+        flex: 1 1 100%; /* Каждая ссылка теперь занимает 100% ширины, чтобы перенести их на новую строку */
+        text-align: center;
+    }
+	/* Блоки */
+   .block-img {
+        width: 200px; /* Еще меньше картинка на мобильных устройствах */
+    }
+
+    .block-description p {
+        font-size: 18px; /* Еще меньший текст */
+        margin-top: 4px; /* Еще меньший отступ сверху для текста */
+    }
+
+    .block-description h3 {
+        font-size: 20px; /* Меньше размер заголовка */
+		word-wrap: break-word;  /* Текст будет переноситься на новую строку */
+		white-space: normal;  /* Разрешаем перенос строк */
+    }
+}
+

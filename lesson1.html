@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Урок 1: Простая анимация</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./styles3.css" />
+  <style>
+    .lesson-viewer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .lesson-image {
+      max-width: 90%;
+      max-height: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .circle-controls {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .circle-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #7e57c2;
+      color: #fff;
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .circle-btn:hover {
+      background-color: #5e3fa3;
+    }
+
+    .lesson-comment {
+      font-size: 18px;
+      color: #555;
+      margin-top: 10px;
+      max-width: 800px;
+    }
+  </style>
+</head>
+
+<body class="wedo-page">
+  <header id="header">
+    <div class="header-content">
+      <h1>Урок 1: Простая анимация</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./info/blocks.html">Справочник</a></li>
+          <li><a href="./wedo.html">О WeDo 2.0</a></li>
+          <li><a href="./lessons.html">Уроки и Игры</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="lesson-viewer">
+      <img id="lessonImage" src="./les/les1/1.jpg" alt="Шаг 1" class="lesson-image" />
+
+      <div id="lessonComment" class="lesson-comment">
+        Начальный этап: создаётся спрайт и добавляется первый костюм.
+      </div>
+
+      <div class="circle-controls">
+        <button class="circle-btn" onclick="prevStep()">←</button>
+        <button class="circle-btn" onclick="nextStep()">→</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Справочник по Scratch 3 и WeDo 2.0</p>
+  </footer>
+
+  <script>
+    const totalSteps = 5; // Обнови в зависимости от количества шагов
+    let currentStep = 1;
+
+    const comments = {
+      1: "Попробуйте оживить спрайт, только не забудьте поставить блок когда флажок нажат",
+      2: "Спрайт двигается, но лишь на чуть-чуть",
+      3: "Попробуем заставить спрайт двигаться постоянно",
+      4: "",
+      5: "Теперь попробуйте сами добавить ему анимацию движеия при помощи блоков из раздела внешнего вида"
+    };
+
+    function updateLesson() {
+      document.getElementById('lessonImage').src = `./les/les1/${currentStep}.jpg`;
+      document.getElementById('lessonImage').alt = `Шаг ${currentStep}`;
+      document.getElementById('lessonComment').textContent = comments[currentStep] || '';
+    }
+
+    function nextStep() {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        updateLesson();
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        updateLesson();
+      }
+    }
+  </script>
+  <script src="./timer.js"></script>
+</body>
+</html>

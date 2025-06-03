@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сборка 6 Лего пила</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles3.css" />
+  <style>
+    .robot-viewer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .robot-image {
+      max-width: 90%;
+      max-height: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin: 20px 0;
+    }
+
+    .arrow-btn {
+      background-color: #7e57c2;
+      color: white;
+      border: none;
+      font-size: 2rem;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .arrow-btn:hover {
+      background-color: #5e3fa3;
+    }
+
+    .comment-text {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #666;
+      max-width: 800px;
+    }
+  </style>
+</head>
+
+<body class="wedo-page">
+  <header id="header">
+    <div class="header-content">
+      <h1>Сборка 6 Лего пила</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./info/blocks.html">Справочник</a></li>
+          <li><a href="./wedo.html">О WeDo 2.0</a></li>
+          <li><a href="./lessons.html">Уроки и Игры</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="robot-viewer">
+      <img id="robotStep" src="./sborki/6lesorub/1.jpg" alt="Сборка 6" class="robot-image" />
+
+      <div class="comment-text" id="commentText">
+        Подсказка: убедитесь, что мотор закреплён снизу правильно.
+      </div>
+
+      <div class="controls">
+        <button class="arrow-btn" onclick="prevStep()">←</button>
+        <button class="arrow-btn" onclick="nextStep()">→</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Справочник по Scratch 3 и WeDo 2.0</p>
+  </footer>
+
+  <script>
+    const totalSteps = 42; // Обнови это число под количество картинок
+    let currentStep = 1;
+
+    // Комментарии для каждого шага (оставь пустую строку если комментарий не нужен)
+    const comments = {
+      1: "Подсказка: убедитесь, что мотор закреплён снизу правильно.",
+      2: "Добавлен держатель для датчика. Важно расположить по центру.",
+      3: "",
+      4: "Проверь соединение шестерёнок перед следующим этапом.",
+      5: "",
+      6: "",
+      7: "Датчик движения должен быть направлен вперёд.",
+      8: "",
+      9: "",
+      10: "Готово! Убедитесь, что ничего не болтается."
+    };
+
+    function updateStep() {
+      document.getElementById("robotStep").src = `./sborki/6lesorub/${currentStep}.jpg`;
+      document.getElementById("robotStep").alt = `Сборка ${currentStep}`;
+      document.getElementById("commentText").textContent = comments[currentStep] || "";
+    }
+
+    function nextStep() {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        updateStep();
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        updateStep();
+      }
+    }
+  </script>
+  <script src="./timer.js"></script>
+</body>
+</html>
